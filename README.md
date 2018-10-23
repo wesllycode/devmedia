@@ -3,6 +3,7 @@
 Còdigo desenvolvido e aprendido no curso do site  [devmedia](https://www.devmedia.com.br).
 
 Acesse também pois possui muito conteúdo.
+Curso Iniciado dia 23/10/2018
 
 ## Linguagem Usada
 
