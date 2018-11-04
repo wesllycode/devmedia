@@ -13,11 +13,12 @@ class App
 		private $params;
 		public  $controllerName;
 
-		public function __construct(){
+		public function __construct()
+		{
 			/* 
 			 * Constantes do sistema
 			*/
-			define('APP_HOST'			, $_SERVER['HTTP_HOST']."/mvc");
+			define('APP_HOST'			, $_SERVER['HTTP_HOST'] . "/mvc");
 			define('PATH'				, realpath('./'));
 			define('TITLE'				, "Primeira Aplicação MVC em PHP - DevMedia");
 			define('DB_HOST'			, "locahost");
@@ -29,10 +30,8 @@ class App
 			$this->url();
 		}
 
-
-public function run ()
+public function run()
 {
-
 if($this->controller){
 	$this->controllerName = ucwords($this->controller) . 'Controller';
 	$this->controllerName = preg_replace('/[^a-zA-Z]/i', '', $this->controllerName);
@@ -68,38 +67,10 @@ if($this->controller){
 	}else{
 		throw new Exception("Nosso suporte já está verificando!!", 500);
 	}
+	throw new Exception("Pàgina não encontrada.",400);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		public function url(){
+public function url(){
 
 			if(isset($_GET['url'])){
 				
@@ -119,30 +90,31 @@ if($this->controller){
 				}
 			}
 		}
-}
 
+		public function getController()
+		{
+			return $this->controller;
+		}
 
+		public function getAction()
+		{
+			return $this->action;
+		}
 
+		public function getControllerName()
+		{
+			return $this->controllerName;
+		}
 
+		public function getParams()
+		{
+			return $this->params;
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-private funciont verificaArray($array, $key){
-	if( isset( $array[ $key]) && !empty( $array[ $key])){
-		return $array[ $key ];
-	}
+		private funciont verificaArray($array, $key){
+			if( isset( $array[ $key]) && !empty( $array[ $key])){
+				return $array[ $key ];
+			}
 		return null;
+	}
 }
