@@ -111,7 +111,7 @@ public function url(){
 			return $this->params;
 		}
 
-		private funciont verificaArray($array, $key){
+		private function verificaArray($array, $key){
 			if( isset( $array[ $key]) && !empty( $array[ $key])){
 				return $array[ $key ];
 			}
