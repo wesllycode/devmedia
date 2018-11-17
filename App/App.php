@@ -18,7 +18,7 @@ class App
 			/* 
 			 * Constantes do sistema
 			*/
-			define('APP_HOST'			, $_SERVER['HTTP_HOST'] . "/mvc");
+			define('APP_HOST'			, $_SERVER['HTTP_HOST'] . "/devmedia/mvc");
 			define('PATH'				, realpath('./'));
 			define('TITLE'				, "Primeira Aplicação MVC em PHP - DevMedia");
 			define('DB_HOST'			, "locahost");
@@ -80,13 +80,13 @@ public function url(){
 
 				$path = explode('/', $path);
 
-				$this->controller = $this->verificarArray( $path, 0);
-				$this->action     = $this->verificarArray( $path, 1);
+				$this->controller = $this->verificarArray($path, 0);
+				$this->action     = $this->verificarArray($path, 1);
 
 				if( $this->verificarArray($path, 2)){
 					unset( $path[0]);
 					unset( $path[1]);
-					$this->params = array_values( $path);
+					$this->params = array_values($path);
 				}
 			}
 		}
@@ -111,7 +111,7 @@ public function url(){
 			return $this->params;
 		}
 
-		private function verificaArray($array, $key){
+		private function verificarArray($array, $key){
 			if( isset( $array[ $key]) && !empty( $array[ $key])){
 				return $array[ $key ];
 			}
