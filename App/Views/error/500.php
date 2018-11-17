@@ -13,6 +13,6 @@
 </head>
 <body>
 <div class="container">
-		<h1 class="error"><?php echo $varMessage; ?></h1>
+		<h1 class="error"><?php echo $varMessage; ?> Erro</h1>
 </body>
 </html> 
