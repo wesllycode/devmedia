@@ -22,8 +22,8 @@ class App
         define('PATH'           , realpath('./'));
         define('TITLE'          , "Primeira aplicação MVC em PHP - DevMedia");
         define('DB_HOST'        , "localhost");
-        define('DB_USER'        , "u370012321_dev");
-        define('DB_PASSWORD'    , "123456");
+        define('DB_USER'        , "root");
+        define('DB_PASSWORD'    , "");
         define('DB_NAME'        , "devmedia");
         define('DB_DRIVER'      , "mysql");
 
